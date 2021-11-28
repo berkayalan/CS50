@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>background</title>
+    </head>
+    <body>
+        <button id="red">R</button>
+        <button id="green">G</button>
+        <button id="blue">B</button>
+        <button id="black">Black</button>
+        <button id="white">White</button>
+        <script>
+
+            let body = document.querySelector('body');
+            document.querySelector('#red').onclick = function() {
+                body.style.backgroundColor = 'red';
+            };
+            document.querySelector('#green').onclick = function() {
+                body.style.backgroundColor = 'green';
+            };
+            document.querySelector('#blue').onclick = function() {
+                body.style.backgroundColor = 'blue';
+            };
+            document.querySelector('#black').onclick = function() {
+                body.style.backgroundColor = 'black';
+            };
+            document.querySelector('#white').onclick = function() {
+                body.style.backgroundColor = 'white';
+            };
+
+        </script>
+    </body>
+</html>
