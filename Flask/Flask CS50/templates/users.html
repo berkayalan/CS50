@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <h1>Users</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Subjects</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for name in users %}
+                <tr>
+                    <td>{{ name }}</td>
+                    <td>{{ users[name] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

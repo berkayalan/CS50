@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Learn Data Science!</h1>
+
+    <h3 style="font-size: large; text-align: left;">
+        You can learn different subjects of data science easily!
+    </h3>
+
+    <form action="/learn" method="post">
+
+        <input autocomplete="off" autofocus name="email" placeholder="Email" type="email">
+        <select name="subject"> //creates select menu
+            <option disabled selected value="">Subject</option>
+
+            {% for subject in subject %}
+                <option value="{{ subject }}">{{ subject }}</option>
+
+                <!--In order to create it with checkbox:  <input name="sport" type="checkbox" value="{{ sport }}"> {{ sport }}-->
+
+            {% endfor %}
+
+        </select>
+        <input type="submit" value="Learn!">
+
+    </form>
+{% endblock %}
